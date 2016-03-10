@@ -1,7 +1,7 @@
 import * as ActionTypes from './constants';
 import { combineReducers } from 'redux';
 
-const initialState = { user: {}, posts: [], selectedPost: null };
+const initialState = { user: {} };
 
 const user = (state = initialState.user, action) => {
   switch (action.type) {

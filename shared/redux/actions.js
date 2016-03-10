@@ -25,6 +25,7 @@ export function setUserErrors(errors, reset = false) {
 export function registerUser(userData) {
   return (dispatch) => {
     return fetch(`${baseURL}/api/register`, {
+      credentials: 'include',
       method: 'post',
       body: JSON.stringify({
         name: userData.name,
@@ -59,6 +60,7 @@ export function registerUser(userData) {
 export function loginUser(userData) {
   return (dispatch) => {
     return fetch(`${baseURL}/api/login`, {
+      credentials: 'include',
       method: 'post',
       body: JSON.stringify({
         email: userData.email,
